@@ -73,3 +73,100 @@ header .container a:hover::before {
     transform: scaleX(1);
     background-color: #0000ff;
   }
+
+.banner-principal{
+    width: 100%;
+    height: 500px;
+    background-image: url(../Assets/banner-azul-vermelho-ldp.svg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-banner{
+        width: 60%;
+        height: 90%;
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 2px 5px 25px 1px #131313;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.conteudo-container{
+    width: 40%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.conteudo-container button{
+    width: 60%;
+    height: 20%;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    box-shadow: 2px 3px 5px 1px #1d1d1d;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.conteudo-container button::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(17, 0, 238, 0.85) 0.01%, rgba(17, 0, 238, 0.85) 19.78%, rgba(17, 0, 238, 0.85) 45.8%, rgba(255, 255, 255, 0.00) 99.92%);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .6s ease-out;
+}
+
+.conteudo-container button:hover::before{
+    transform-origin: left;
+    transform: scaleX(1);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(238, 0, 0, 0.85) 0.01%, rgba(238, 0, 0, 0.85) 19.78%, rgba(238, 0, 0, 0.85) 45.8%, rgba(255, 255, 255, 0.00) 99.92%);
+}
+.conteudo-container button:hover{
+    transition: all .7s ease-in-out;
+}
+
+
+.conteudo-container h1{
+    font-size: 45px;
+}
+.img-container{
+    width: 40%;
+    height: 60%;
+    background-image: url(../Assets/svg3spider-man-banner-principal.svg);
+    background-size: cover;
+}
+
+.pre-time-line{
+    width: 100%;
+    height: 200px;
+    background-color: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.pre-time-line h2{
+    text-align: center;
+    font-size: 35px;
+    color: #f1f1f1;
+}
+.pre-time-line button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(../Assets/botao-timeline-azul.svg);
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
