@@ -170,3 +170,7 @@ header .container a:hover::before {
     position: relative;
     overflow: hidden;
 }
+.pre-time-line button:hover{
+    transition: ease-in-out .7s;
+    background-image: url(../Assets/botao-timeline-vermelho.svg);
+}
