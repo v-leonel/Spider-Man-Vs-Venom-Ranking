@@ -7,19 +7,37 @@
     <title>Document</title>
 </head>
 <body>
-    <section class="principal">
-        <div class="form-cadastro-usuario">
-            <form class="inputs-cadastro">
-                <label for="">Nome</label>
-                <input type="text"><br>
-                <label for="">Email</label>
-                <input type="text"><br>
-                <label for="">Cpf</label>
-                <input type="text"><br>
-                <label for="">Senha</label>
-                <input type="text">
-            </form>
+    <div class="container-principal">
+        <div class="container-esquerda">
+            <img src="../Assets/background-spiderman-cadastro.png" alt="">
         </div>
-    </section>
+        <div class="container-direita">
+            <div class="container-form">
+                <h1>Cadastro</h1>
+                <form action="">
+                    <label for="">Nome</label>
+                    <input required="" class="estilo-inputs" type="text">
+    
+                    <label for="">Email</label>
+                    <input required="" class="estilo-inputs" type="email">
+    
+                    <label for="">Cpf</label>
+                    <input required="" class="estilo-inputs" type="text">
+    
+                    <label for="">Senha</label>
+                    <input required="" class="estilo-inputs" type="password">
+    
+                    <label for="">Confirme seu email</label>
+                    <input required="" class="estilo-inputs" type="email">
+    
+                    <label for="">Confirme sua senha</label>
+                    <input required="" class="estilo-inputs" type="password">
+                </form>
+                <div class="container-btn">
+                    <button class="btn-cadastrar">CADASTRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
