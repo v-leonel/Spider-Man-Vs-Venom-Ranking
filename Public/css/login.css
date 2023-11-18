@@ -81,9 +81,9 @@ body{
     font-weight: bold;
 }
 .btn-cadastrar:hover{
-    border: 1px solid #5757FF;
+    border: 1px solid #A0A0FF;
     transition: all .7s;
-    color: #5757FF;
+    color: #A0A0FF;
     cursor: pointer;
 }
 form p{
@@ -91,5 +91,5 @@ form p{
     text-align: center;
 }
 form p a{
-    color: #5757FF;
+    color: #A0A0FF;
 }
