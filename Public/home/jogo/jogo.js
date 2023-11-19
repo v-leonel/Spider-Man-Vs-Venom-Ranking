@@ -39,10 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
     function resetGame() {
         state.values.currentTime = 15;
         state.values.result = 0;
+        state.view.score.textContent = state.values.result
     }
 
     function runGame() {
-        state.actions.timerId = setInterval(randomSquare, 500);
+        state.actions.timerId = setInterval(randomSquare, 1000);
         state.actions.countDownTimerId = setInterval(countDown, 1000);
     }
 
