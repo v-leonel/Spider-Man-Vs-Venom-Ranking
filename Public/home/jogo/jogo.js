@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
             gameVelocity: 1000,
             hitPosition: 0,
             result: 0,
-            currentTime: 15,
+            currentTime: 5,
             totalLives: 3,
         },
         actions: {
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
             clearInterval(state.actions.countDownTimerId);
             clearInterval(state.actions.timerId);
             alert(`Game Over! O seu Resultado foi: ${state.values.result}`);
+            state.view.score.textContent = 0
             countLives();
-
             if (state.values.totalLives > 0) {
                 resetGame();
                 runGame();
@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function resetGame() {
-        state.values.currentTime = 15;
+        state.values.currentTime = 5;
         state.values.result = 0;
         state.view.score.textContent = state.values.result
     }
@@ -67,10 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
         state.view.squares.forEach((square) => {
             square.addEventListener("mousedown", () => {
                 if (square.id === state.values.hitPosition) {
-                    state.values.result++;
-                    state.view.score.textContent = state.values.result;
-                    state.values.hitPosition = null;
-                    // playSound();
+                    if(state.values.currentTime <= 0){
+                        state.view.score.textContent = 0
+                    }
+                    else if (state.values.currentTime > 0){
+                        state.values.result++;
+                        state.view.score.textContent = state.values.result;
+                        state.values.hitPosition = null;
+                        // playSound();
+
+                    }
+
                 }
             });
         });
@@ -83,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
         state.values.result = 0;
         state.view.score.textContent = state.values.result;
 
-        state.values.currentTime = 15;
+        state.values.currentTime = 5;
         state.view.timeLeft.textContent = state.values.currentTime;
 
         clearInterval(state.actions.timerId);
