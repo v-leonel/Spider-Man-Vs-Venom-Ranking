@@ -74,8 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         state.values.result++;
                         state.view.score.textContent = state.values.result;
                         state.values.hitPosition = null;
-                        // playSound();
-
                     }
 
                 }
@@ -100,7 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
         runGame();
     }
 
-    // Adicione um ouvinte de eventos ao botão de início
     const startButton = document.getElementById("start-button");
     startButton.addEventListener("click", startGame);
 });
