@@ -10,22 +10,23 @@ body{
 }
 .container-principal{
     width: 100%;
-    height: 100vh;
+    height: 99.8vh;
     background-color: #131313;
     display: flex;
     flex-direction: row;
 }
 .container-esquerda{
-    width: 45%;
+    width: 40%;
     height: 100%;
 }
 .container-esquerda img{
     width: 100%;
     height: 100%;
-    border-radius: 30px 0px 30px 0px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 .container-direita{
-    width: 55%;
+    width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -37,13 +38,13 @@ body{
     display: flex;
     align-items: baseline;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .container-form form{
     width: 100%;
     height: 50%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
 }
 .container-form h1{
@@ -64,6 +65,14 @@ body{
     padding: 0 2%;
     color: #a3a3a3;
     font-size: 18px;
+}
+.estilo-inputs::placeholder{
+    font-style: italic;
+    color: #FF5454;
+}
+.estilo-inputs:focus::placeholder{
+    color: #A0A0FF;
+    font-style: normal;
 }
 .container-btn{
     width: 100%;

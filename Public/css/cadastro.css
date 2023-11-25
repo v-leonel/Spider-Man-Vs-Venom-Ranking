@@ -10,21 +10,23 @@ body{
 }
 .container-principal{
     width: 100%;
-    height: 100vh;
+    height: 99.8vh;
     background-color: #131313;
     display: flex;
     flex-direction: row;
 }
 .container-esquerda{
-    width: 45%;
+    width: 40%;
     height: 100%;
 }
 .container-esquerda img{
     width: 100%;
     height: 100%;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
 }
 .container-direita{
-    width: 55%;
+    width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -36,13 +38,13 @@ body{
     display: flex;
     align-items: baseline;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .container-form form{
     width: 100%;
     height: 50%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: column;
 }
 .container-form h1{
@@ -50,13 +52,7 @@ body{
     font-weight: bold;
     font-size: 35px;
 }
-.container-form label{
-    font-size: 20px;
-    margin: 0 2%;
-    color: #a3a3a3;
-    margin-top: 3%;
-    font-weight: lighter;
-}
+
 .estilo-inputs{
     background-color: #131313;
     outline: none;
@@ -65,6 +61,15 @@ body{
     color: #a3a3a3;
     font-size: 18px;
     margin-top: 2%;
+}
+.estilo-inputs::placeholder{
+    font-size: 20px;
+    color: #A0A0FF;
+    font-style:italic;
+}
+.estilo-inputs:focus::placeholder{
+    color: #FF5454;
+    font-style: normal;
 }
 .container-btn{
     width: 100%;
@@ -80,10 +85,11 @@ body{
     background-color: #131313;
     color: #A0A0FF;
     font-weight: bold;
+    transition: all .7s;
+
 }
 .btn-cadastrar:hover{
     border: 1px solid #FF5454;
-    transition: all .7s;
     color: #FF5454;
     cursor: pointer;
 }
