@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function runGame() {
-        state.actions.timerId = setInterval(randomSquare, 1000);
+        state.actions.timerId = setInterval(randomSquare, 800);
         state.actions.countDownTimerId = setInterval(countDown, 1000);
     }
 
@@ -100,5 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const startButton = document.getElementById("start-button");
     startButton.addEventListener("click", startGame);
+    
 });
 

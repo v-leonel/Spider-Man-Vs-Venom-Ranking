@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../css/pagina-inicial.css">
+</head>
+<body>
+    <div class="main">
+        <div class="menu-lateral">
+            <h1>Ola, Usuário</h1>
+            <ul class="ul-superior">
+                <li><button>HISTÓRICO</button></li>
+                <li><button>RANKING</button></li>
+                <li><button>DASHBOARD</button></li>
+            </ul>
+            <ul class="ul-inferior">
+               <li>
+                <a href="../../landing_page/index.html">SAIR <img src="../../Assets/icone-logout.svg"></a>
+               </li>
+            </ul>
+        </div>
+        <div class="menu-jogo">
+            <div class="card-inicial-jogo">
+                <h3> <b style="color:#4141ff;">Embarque</b> em uma batalha <b style="color: #ff2929;" >épica</b> enquanto o Homem-Aranha encara o simbionte <b class="estilo-palavra-venom">Venom</b>.</h3>
+                <button onclick="redirecionarParaJogo()" >JOGAR</button>
+                <a href="">Clique aqui para saber mais sobre o jogo</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+
+    function redirecionarParaJogo(){
+        window.location.href = "../../home/jogo/index.html"
+    }
+
+</script>

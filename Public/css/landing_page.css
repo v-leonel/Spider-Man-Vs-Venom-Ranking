@@ -1,16 +1,31 @@
-*{
+* {
     padding: 0;
     border: 0;
     margin: 0;
     font-family: sans-serif;
 }
-header{
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
     width: 100%;
-    height: 80px;
+    height: 50px;
     background-color: #1d1d1d;
     color: #f1f1f1;
+    position: relative;
+    transition: background-color 0.3s ease;
 }
-header .container{
+
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1d1d1dd9;
+}
+
+header .container {
     width: 80%;
     height: 100%;
     margin: 0 10%;
@@ -18,63 +33,80 @@ header .container{
     justify-content: space-between;
     align-items: center;
 }
-header .container ul{
+
+header .container img {
+    width: 35px;
+    height: 35px;
+}
+
+header .container ul {
     list-style: none;
 }
-.ul-curiosidade-novidade{
+
+.ul-curiosidade-novidade {
     width: 25%;
     display: flex;
-    justify-content: space-between ;
+    justify-content: space-between;
 }
-.ul-login{
+
+.ul-login {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.ul-login li{
+
+.ul-login li {
     display: flex;
     align-items: center;
 }
-.ul-login li a{
+
+.lnk-style {
     display: flex;
     align-items: center;
 }
-.ul-login li a img{
+
+.lnk-style img {
     display: flex;
     align-items: center;
     width: 20px;
 }
-ul li a{
+.icon-spider:hover{
+    width: 40px;
+    height: 40px;
+}
+
+.lnk-style {
     text-decoration: none;
     color: #f1f1f1;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
 }
-header .container a{
+
+.lnk-style {
     position: relative;
 }
-  
-header .container a::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 4px;
-      background-color: #ff0000;
-      bottom: 0;
-      left: 0;
-      transform-origin: center;
-      transform: scaleX(0);
-      transition: transform .3s ease-in-out;
-    }
-  
-header .container a:hover::before {
+
+.lnk-style::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ff0000;
+    bottom: 0;
+    left: 0;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.lnk-style:hover::before {
     transform-origin: center;
     transform: scaleX(1);
     background-color: #0000ff;
-  }
+}
 
-.banner-principal{
+.banner-principal {
     width: 100%;
     height: 500px;
     background-image: url(../Assets/banner-azul-vermelho-ldp.svg);
@@ -84,36 +116,38 @@ header .container a:hover::before {
     justify-content: center;
 }
 
-.container-banner{
-        width: 60%;
-        height: 90%;
-        background-color: #fff;
-        border-radius: 15px;
-        box-shadow: 2px 5px 25px 1px #131313;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+.container-banner {
+    width: 60%;
+    height: 90%;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0px 0px 25px 2px #131313;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.conteudo-container{
+.conteudo-container {
     width: 40%;
     height: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.conteudo-container button{
+
+.conteudo-container button {
     width: 60%;
     height: 20%;
     border-radius: 10px;
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     box-shadow: 2px 3px 5px 1px #1d1d1d;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
-.conteudo-container button::before{
+
+.conteudo-container button::before {
     content: "";
     position: absolute;
     top: 0;
@@ -126,41 +160,45 @@ header .container a:hover::before {
     transition: transform .6s ease-out;
 }
 
-.conteudo-container button:hover::before{
+.conteudo-container button:hover::before {
     transform-origin: left;
     transform: scaleX(1);
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(238, 0, 0, 0.85) 0.01%, rgba(238, 0, 0, 0.85) 19.78%, rgba(238, 0, 0, 0.85) 45.8%, rgba(255, 255, 255, 0.00) 99.92%);
 }
-.conteudo-container button:hover{
+
+.conteudo-container button:hover {
     transition: all .7s ease-in-out;
 }
 
 
-.conteudo-container h1{
+.conteudo-container h1 {
     font-size: 45px;
 }
-.img-container{
+
+.img-container {
     width: 40%;
     height: 60%;
     background-image: url(../Assets/svg3spider-man-banner-principal.svg);
     background-size: cover;
 }
 
-.pre-time-line{
+.pre-valores {
     width: 100%;
-    height: 200px;
+    height: 150px;
     background-color: #131313;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
 }
-.pre-time-line h2{
+
+.pre-valores h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: 26px;
     color: #f1f1f1;
 }
-.pre-time-line button{
+
+.pre-valores button {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -169,8 +207,167 @@ header .container a:hover::before {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-}
-.pre-time-line button:hover{
     transition: ease-in-out .7s;
+}
+
+.pre-valores button:hover {
     background-image: url(../Assets/botao-timeline-vermelho.svg);
+}
+
+.banner-valores {
+    width: 100%;
+    height: 350px;
+    background-color: #131313;
+    text-align: center;
+    color: #f1f1f1;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-valores {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    text-align: center;
+}
+
+.circle-valores {
+    width: 25%;
+    border-radius: 50%;
+    font-family: bold;
+    font-size: 18px;
+}
+
+.sobre {
+    width: 100%;
+    height: 500px;
+    background-color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-principal-sobre {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-sobre1 {
+    width: 40%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-sobre1 img {
+    width: 90%;
+    margin: 5% 0;
+}
+
+.linha {
+    width: 20%;
+    border: 2px solid #5252ff;
+    height: 0px;
+}
+
+.container-sobre2 {
+    width: 50%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.container-sobre2 p {
+    font-size: 18px;
+}
+
+.container-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 30%;
+}
+
+.box-sobre {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: baseline;
+    flex-direction: column;
+}
+
+.box-sobre {
+    font-weight: bold;
+}
+
+.box-img-sobre {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.linha2 {
+    width: 13%;
+    border: 2px solid #ff2929;
+    height: 0px;
+}
+
+.box-img-sobre {
+    transition: 2s all;
+}
+
+.box-img-sobre img:hover {
+    width: 130%;
+    cursor: pointer;
+}
+.footer{
+    width: 100%;
+    height: 125px;
+    background-color: #131313;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.footer h2{
+    color: #f1f1f1;
+    font-size: 18px;
+}
+.container-redes{
+    height: 100%;
+    width: 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.container-redes h4{
+    font-size: 16px;
+    color: #ff2929;
+    font-weight: bold;
+}
+.container-redes img{
+    width: 30px;
+    transition: .7s all;
+}
+.container-redes img:hover{
+    width: 35px;
+    cursor: pointer;
 }

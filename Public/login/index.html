@@ -15,18 +15,22 @@
             <div class="container-form">
                 <h1>Login</h1>
                 <form action="">
-                    <label for="">Email</label>
-                    <input required="" class="estilo-inputs" type="email">
-    
-                    <label for="">Senha</label>
-                    <input required="" class="estilo-inputs" type="password">
+                    <input required="" placeholder="Email" class="estilo-inputs" type="email">    
+                    <input required="" placeholder="Senha" class="estilo-inputs" type="password">
                     <p>ainda não tem conta? <a href="../cadastro/index.html">Cadastre-se</a></p>
                 </form>
                 <div class="container-btn">
-                    <button class="btn-cadastrar">ENTRAR</button>
+                    <button onclick="logar()" class="btn-cadastrar">ENTRAR</button>
                 </div>
             </div>
         </div>
     </div>
 </body>
 </html>
+<script>
+
+    function logar(){
+        window.location.href = "../home/index.html"
+    }
+
+</script>

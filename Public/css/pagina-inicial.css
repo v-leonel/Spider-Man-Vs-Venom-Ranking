@@ -1,0 +1,164 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #131313;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 99.5vh;
+}
+
+.menu-lateral {
+    width: 15%;
+    height: 100%;
+    background-color: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-image: linear-gradient(#0000FF, #0000FF, #FFFFFF, #FF0000, #FF0000) 30;
+    border-bottom: 2px;
+    border-right: 2px;
+    border-style: solid;
+}
+
+.menu-lateral h1 {
+    font-size: 22px;
+    color: #f1f1f1;
+}
+
+.ul-superior {
+    list-style: none;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ul-superior li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ul-superior li button {
+    width: 60%;
+    height: 30px;
+    color: #fff;
+    background-color: #121212;
+    font-size: 1rem;
+    transition: 1s all;
+    border-radius: 13px;
+    box-shadow: 2px 2px 7px 0px #fff;
+}
+
+.ul-superior li button:hover {
+    cursor: pointer;
+    border-color: #4141ff;
+    box-shadow: 0px 0px 7px 1px #4141ff;
+    color: #7272ff;
+}
+
+.ul-inferior {
+    list-style: none;
+    width: 100%;
+}
+
+.ul-inferior li {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ul-inferior li a {
+    text-decoration: none;
+    color: #f1f1f1;
+}
+
+.menu-jogo {
+    width: 88%;
+    height: 100vh;
+    background: url(../Assets/fundo-menu-jogo.png);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-inicial-jogo {
+    width: 45%;
+    height: 65%;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.90);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.card-inicial-jogo h3 {
+    width: 70%;
+    font-size: 24px;
+    color: #f1f1f1;
+    font-weight: normal;
+}
+.card-inicial-jogo a{
+    color: #f1f1f1;
+    font-size: 14px;
+    transition: .5s all;
+}
+.card-inicial-jogo a:hover{
+    color: #8e8c8c;
+}
+
+.card-inicial-jogo button{
+    width: 30%;
+    height: 45px;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: #131313;
+    box-shadow: 2px 2px 7px 1px #f1f1f1;
+    color: #f1f1f1;
+    transition: .7s all;
+    cursor: pointer;
+}
+
+.card-inicial-jogo button:hover{
+    box-shadow: 0px 0px 7px 1px #ff2929;
+    color: #ff2929;
+}
+
+ul.ul-inferior a {
+    position: relative;
+    transition: .5s all;
+}
+
+.ul-inferior a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ff0000;
+    bottom: 0;
+    left: 0;
+    transform-origin: center;
+    transform: scaleX(0);
+    transition: transform .3s ease-in-out;
+}
+
+.ul-inferior a:hover::before {
+    transform-origin: center;
+    transform: scaleX(1);
+    background-color: #0000ff;
+}

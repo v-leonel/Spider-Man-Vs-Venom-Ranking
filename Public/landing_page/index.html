@@ -1,41 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/landing_page.css">
-    <title>Document</title>
+    <script src="../landing_page/main.js"></script>
+    <link rel="shortcut icon" href="../Assets/icon-live-game.png" type="image/x-icon">
+    <title>Landing Page</title>
 </head>
+
 <body>
 
     <!-- Header -->
     <header>
         <div class="container">
-            <img src="../Assets/Logo-Home.svg" alt="">
+            <a href="#inicio"><img class="icon-spider" src="../Assets/icon-live-game.png" alt=""></a>
             <ul class="ul-curiosidade-novidade">
-                <li><a href="">Valores</a></li>
-                <li><a href="">Novidades</a></li>
+                <li><a class="lnk-style" href="#valores">Valores</a></li>
+                <li><a class="lnk-style" href="#sobre">Sobre</a></li>
             </ul>
             <ul class="ul-login">
-                <li><a class="btn-link-header" href="../login/">Login<img src="../Assets/vetor-lnk-login-spider.svg"></a></li>
+                <li><a class="lnk-style" href="../login/index.html">Login</a></li>
             </ul>
         </div>
     </header>
+
     <!-- Banner -->
-    <section class="banner-principal">
+    <section id="inicio" class="banner-principal">
         <div class="container-banner">
             <div class="conteudo-container">
                 <h1>Faça parte do universo aranha</h1>
-                <button>Cadastre-se</button>
+                <button onclick="redirecionarParaCadastro()">Cadastre-se</button>
             </div>
             <div class="img-container">
             </div>
         </div>
     </section>
-    <!-- Pré Time Line -->
-    <section class="pre-time-line">
-        <h2>Linha do <span style="color: #ff0000;" >tempo</span><br><span style="color: #0000ff;" >criação</span> até dias atuais</h2>
-        <button></button>
+
+    <!-- Pré Valores-->
+    <section id="valores" class="pre-valores">
+        <h2><span style="color: #ff0000;">Clique</span><br>para conhecer meus <span style="color: blue;">valores</span>
+        </h2>
+        <button onclick="exibirValores('div_valores')"></button>
+    </section>
+
+    <!-- Valores -->
+    <section style="display: none;" id="div_valores" class="banner-valores">
+        <div class="container-valores">
+            <div class="circle-valores">
+                <img src="../Assets/svg-responsabilidade.svg" alt="">
+                <h3 style="color: #5252ff;">Responsabilidade</h3>
+            </div>
+            <div class="circle-valores">
+                <img src="../Assets/svg-determinacao.svg" alt="">
+                <h3 style="color: #ff2929;">Determinação</h3>
+            </div>
+            <div class="circle-valores">
+                <img src="../Assets/svg-coragem.svg" alt="">
+                <h3 style="color: #5252ff;">Coragem</h3>
+            </div>
+        </div>
+        <h4>Com grandes poderes vem grandes responsabilidades</h4>
+    </section>
+
+    <!-- Sobre o herói -->
+    <section id="sobre" class="sobre">
+        <div class="container-principal-sobre">
+            <div class="container-sobre1">
+                <h2>Sobre o Herói</h2>
+                <div class="linha"></div>
+                <img src="../Assets/svg-spiderman-sobre.svg" alt="">
+            </div>
+            <div class="container-sobre2">
+                <p>Peter Parker, ganha habilidades de aranha após ser picado por uma aranha geneticamente modificada.
+                    Ele enfrenta os desafios da adolescência enquanto luta contra o crime, equilibrando sua vida pessoal
+                    com a
+                    responsabilidade de ser um herói. Spider-Man é conhecido por suas habilidades sobre-humanas,
+                    conflitos pessoais e
+                    dilemas éticos, tornando-se um dos super-heróis mais populares e amados.</p>
+                <div class="container-box">
+                    <div class="box-sobre">
+                        <p>Assista</p>
+                        <div class="linha2"></div>
+                        <div class="box-img-sobre">
+                            <a href="https://www.disneyplus.com/pt-br/franchise/homem-aranha" target="_blank"><img
+                                    src="../Assets/logo-disney.svg" alt=""></a>
+                            <a href="https://www.hbomax.com/br/pt/feature/urn:hbo:feature:GZS_zdAcKjrqspgEAABKH"
+                                target="_blank"><img src="../Assets/logo-hbo.svg" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="box-sobre">
+                        <p>Jogue</p>
+                        <div class="linha2"></div>
+                        <div class="box-img-sobre">
+                            <a href="https://store.playstation.com/pt-br/product/UP9000-CUSA02299_00-MARVELSSMGOTY000"
+                                target="_blank"><img src="../Assets/logo-ps4.svg" alt=""></a>
+                            <a href="https://www.playstation.com/pt-br/games/marvels-spider-man-2/" target="_blank"><img
+                                    src="../Assets/logo-ps5.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+        <h2>₢Projeto Desenvolvido por: <span style="color: #5252ff;">Victor Leonel</span></h2>
+        <div class="container-redes">
+            <h4>Minhas Redes</h4>
+            <a href="https://github.com/v-leonel" target="_blank"><img src="../Assets/icon-github.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/victor-leonel-0a24b424b/" target="_blank"><img src="../Assets/icon-linkedin.svg" alt=""></a>
+        </div>
     </section>
 </body>
-</html> 
+
+</html>
+<script>
+
+    function exibirValores(exibir) {
+        var display = document.getElementById(exibir).style.display;
+        if (display == "none") {
+            document.getElementById(exibir).style.display = "flex";
+        }
+        else {
+            document.getElementById(exibir).style.display = "none";
+        }
+    }
+
+</script>
