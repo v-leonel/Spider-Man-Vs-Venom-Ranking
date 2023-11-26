@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/cadastro.css">
+    <script src="../cadastro/main.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -15,12 +16,12 @@
             <div class="container-form">
                 <h1>Cadastro</h1>
                 <form action="">
-                    <input required="" placeholder="Nome" class="estilo-inputs" type="text">
-                    <input placeholder="Email" required="" class="estilo-inputs" type="email">
-                    <input placeholder="CPF" required="" class="estilo-inputs" type="text">
-                    <input placeholder="Senha" required="" class="estilo-inputs" type="password">
-                    <input placeholder="Confirme seu email" required="" class="estilo-inputs" type="email">
-                    <input placeholder="Confirme sua senha" required="" class="estilo-inputs" type="password">
+                    <input id="input_nome" placeholder="Nome" required class="estilo-inputs" type="text">
+                    <input id="input_email" placeholder="Email" required class="estilo-inputs" type="email">
+                    <input id="input_cpf" placeholder="CPF" required class="estilo-inputs" type="text">
+                    <input id="input_senha" placeholder="Senha" required class="estilo-inputs" type="password">
+                    <input id="input_confirmacao_email" placeholder="Confirme seu email" required class="estilo-inputs" type="email">
+                    <input id="input_confirmacao_senha" placeholder="Confirme sua senha" required class="estilo-inputs" type="password">
                 </form>
                 <div class="container-btn">
                     <button onclick="cadastrar()" class="btn-cadastrar">CADASTRAR</button>
@@ -30,10 +31,3 @@
     </div>
 </body>
 </html>
-<script>
-
-    function cadastrar(){
-        window.location.href = "../login/index.html"
-    }
-
-</script>
