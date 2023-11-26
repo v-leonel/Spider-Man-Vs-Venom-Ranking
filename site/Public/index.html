@@ -111,13 +111,29 @@
         <div class="container-redes">
             <h4>Minhas Redes</h4>
             <a href="https://github.com/v-leonel" target="_blank"><img src="../Assets/icon-github.svg" alt=""></a>
-            <a href="https://www.linkedin.com/in/victor-leonel-0a24b424b/" target="_blank"><img src="../Assets/icon-linkedin.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/victor-leonel-0a24b424b/" target="_blank"><img
+                    src="../Assets/icon-linkedin.svg" alt=""></a>
         </div>
     </section>
 </body>
 
 </html>
 <script>
+    function redirecionarParaCadastro() {
+        window.location.href = "../cadastro/index.html"
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > header.offsetTop) {
+                header.classList.add('fixed');
+            } else {
+                header.classList.remove('fixed');
+            }
+        });
+    });
 
     function exibirValores(exibir) {
         var display = document.getElementById(exibir).style.display;

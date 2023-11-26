@@ -21,7 +21,7 @@ function cadastrar() {
             else if (senhaVar != confirmacaoSenha)
                 alert('As senhas não coincidem.')
             else
-                setInterval(sumirMensagem, 5000);
+                setInterval(5000);
         }
     }
 
@@ -37,7 +37,6 @@ function cadastrar() {
             cpfServer: cpfVar,
             emailServer: emailVar,
             senhaServer: senhaVar,
-            empresaServer: empresaVar
         }),
     })
         .then(function (resposta) {
@@ -60,23 +59,6 @@ function cadastrar() {
 
     return false;
 }
-
-
-// function listar() {
-//     fetch("/empresas/listar", {
-//         method: "GET",
-//     })
-//         .then(function (resposta) {
-//             resposta.json().then((empresas) => {
-//                 empresas.forEach((empresa) => {
-//                     empreUsuario.innerHTML += `<option value='${empresa.id}'>${empresa.cnpj}</option>`;
-//                 });
-//             });
-//         })
-//         .catch(function (resposta) {
-//             console.log(`#ERRO: ${resposta}`);
-//         });
-// }
 
 // function sumirMensagem() {
 //     conteudo2.style.display = "none";
