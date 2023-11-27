@@ -9,15 +9,13 @@
 <body>
     <div class="main">
         <div class="menu-lateral">
-            <h1>Ola, Usuário</h1>
+            <h1>Olá, <span id="b_usuario">Usuário</span></h1>
             <ul class="ul-superior">
-                <li><button>HISTÓRICO</button></li>
-                <li><button>RANKING</button></li>
-                <li><button>DASHBOARD</button></li>
+                <li><button onclick="redirecionarParaDashboard()">DASHBOARD</button></li>
             </ul>
             <ul class="ul-inferior">
                <li>
-                <a href="../../landing_page/index.html">SAIR <img src="../../Assets/icone-logout.svg"></a>
+                <a href="../../index.html">SAIR <img src="../../Assets/icone-logout.svg"></a>
                </li>
             </ul>
         </div>
@@ -32,9 +30,16 @@
 </body>
 </html>
 <script>
+     b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
     function redirecionarParaJogo(){
         window.location.href = "../../home/jogo/index.html"
     }
 
+    function redirecionarParaRanking(){
+        window.location.href = "../../home/ranking/index.html"
+    }
+    function redirecionarParaDashboard(){
+        window.location.href = "../../home/dashboard/index.html"
+    }
 </script>

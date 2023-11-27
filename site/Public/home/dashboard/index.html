@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="menu-lateral">
+            <h1>Olá, <span id="b_usuario">Usuário</span></h1>
+            <ul class="ul-superior">
+                <li><button onclick="redirecionarParaPaginaInicial()">INICIO</button></li>
+            </ul>
+            <ul class="ul-inferior">
+                <li>
+                    <a href="../../index.html">SAIR <img src="../../Assets/icone-logout.svg"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
+
+
+    function redirecionarParaPaginaInicial() {
+        window.location.href = "../../home/pagina-inicial/index.html"
+    }
+    function redirecionarParaRanking() {
+        window.location.href = "../../home/ranking/index.html"
+    }
+
+</script>

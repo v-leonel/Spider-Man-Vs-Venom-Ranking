@@ -1,10 +1,10 @@
 function cadastrar() {
 
     var nomeVar = input_nome.value;
-    var emailVar = input_email.value;
     var cpfVar = input_cpf.value;
-    var senhaVar = input_senha.value;
+    var emailVar = input_email.value;
     var confirmacaoEmail = input_confirmacao_email.value;
+    var senhaVar = input_senha.value;
     var confirmacaoSenha = input_confirmacao_senha.value;
     var frase = '@'
 
@@ -34,8 +34,8 @@ function cadastrar() {
             // crie um atributo que recebe o valor recuperado aqui
             // Agora vá para o arquivo routes/usuario.js
             nomeServer: nomeVar,
-            cpfServer: cpfVar,
             emailServer: emailVar,
+            cpfServer: cpfVar,
             senhaServer: senhaVar,
         }),
     })

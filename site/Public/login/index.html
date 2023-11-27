@@ -21,8 +21,6 @@
                 </form>
                 <div class="container-btn">
                     <button onclick="entrar()" class="btn-cadastrar">ENTRAR</button>
-
-                    <img src= alt="">
                 </div>
             </div>
         </div>
@@ -63,12 +61,10 @@
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-                    sessionStorage.EMAIL_USUARIO = json[0].emailVar;
-                    sessionStorage.NOME_USUARIO = json[0].nomeVar;
+                    sessionStorage.EMAIL_USUARIO = json[0].email;
+                    sessionStorage.NOME_USUARIO = json[0].nome;
                     sessionStorage.ID_USUARIO = json[0].id;
                     console.log(sessionStorage);
-                    // sessionStorage.AQUARIOS = JSON.stringify(json.salas)
-
                     setTimeout(function () {
                         window.location = "../home/pagina-inicial/index.html";
                     }, 1000); // apenas para exibir o loading
