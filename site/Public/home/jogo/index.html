@@ -14,13 +14,16 @@
 <body>
     <div class="main">
         <div class="menu">
-            <button class="btn-iniciar-jogo" id="start-button" onclick="iniciarTentativa()" >iniciar Partida</button>
+            <a style="color: #FF5454; text-decoration: none;" href="../pagina-inicial/index.html">Voltar
+            </a>
+            <button style="display: block;" class="btn-iniciar-jogo" id="start-button" onclick="esconderBotao('start-button')">iniciar
+                Partida</button>
             <div class="menu-time">
-                <h2  style="color: #FF5454;">Temporizador</h2>
+                <h2 style="color: #FF5454;">Temporizador</h2>
                 <h2 id="time-left">0</h2>
             </div>
             <div class="menu-score">
-                <h2 style="color: #FF5454;" >Pontuação</h2>
+                <h2 style="color: #FF5454;">Pontuação</h2>
                 <h2 id="score">0</h2>
             </div>
             <div class="menu-lives">
@@ -29,6 +32,9 @@
             </div>
         </div>
         <div class="panel">
+            <div style="display: none;" id="result_painel" class="result-painel">
+                <button style="width: 20%; height: 30px;" onclick="exibirResultPainel('result_painel')">fechar</button>
+            </div>
             <div class="panel-row">
                 <div class="square" id="1"></div>
                 <div class="square" id="2"></div>
@@ -52,4 +58,4 @@
 </body>
 
 </html>
-<script  src="../jogo/jogo.js"></script>
+<script src="../jogo/jogo.js"></script>

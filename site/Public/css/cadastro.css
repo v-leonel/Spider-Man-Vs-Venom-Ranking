@@ -93,3 +93,10 @@ body{
     color: #FF5454;
     cursor: pointer;
 }
+form p{
+    color: #a3a3a3;
+    text-align: center;
+}
+form p a{
+    color: #FF5454;
+}

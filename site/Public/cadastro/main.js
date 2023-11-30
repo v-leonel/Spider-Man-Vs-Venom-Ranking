@@ -1,14 +1,14 @@
 function cadastrar() {
 
     var nomeVar = input_nome.value;
-    var cpfVar = input_cpf.value;
+    // var cpfVar = input_cpf.value;
     var emailVar = input_email.value;
     var confirmacaoEmail = input_confirmacao_email.value;
     var senhaVar = input_senha.value;
     var confirmacaoSenha = input_confirmacao_senha.value;
     var frase = '@'
 
-    if (nomeVar === '' || cpfVar <= 0 || emailVar === '') {
+    if (nomeVar === '' || emailVar === '') {
         alert('Por favor preencha o registro')
         return false;
     }
@@ -35,7 +35,7 @@ function cadastrar() {
             // Agora vá para o arquivo routes/usuario.js
             nomeServer: nomeVar,
             emailServer: emailVar,
-            cpfServer: cpfVar,
+            // cpfServer: cpfVar,
             senhaServer: senhaVar,
         }),
     })

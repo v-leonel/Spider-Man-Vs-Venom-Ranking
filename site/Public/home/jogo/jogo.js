@@ -67,13 +67,16 @@ document.addEventListener("DOMContentLoaded", function () {
                 runGame();
             } else {
                 var totalTimePlayed = 15;
-                alert(`
-                    Sua pontuação total: ${state.values.totalScore}
-                    Maior pontuação por rodada: ${state.values.maxRoundScore}
-                    Menor pontuação por rodada: ${state.values.minRoundScore}
-                    Tempo Total Jogado: ${state.values.currentTime = 15} segundos
-                `);
+                exibirResultPainel('result_painel');
+
+                result_painel.innerHTML += `
+                Sua pontuação total: ${state.values.totalScore}
+                Maior pontuação por rodada: ${state.values.maxRoundScore}
+                Menor pontuação por rodada: ${state.values.minRoundScore}
+                Tempo Total Jogado: ${state.values.currentTime = 15} segundos`
+                
                 enviarEstatisticas(state.values.totalScore, state.values.minRoundScore, state.values.maxRoundScore, totalTimePlayed);
+                esconderBotao('start-button');
             }
         }
     }
@@ -150,3 +153,23 @@ document.addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("start-button");
     startButton.addEventListener("click", startGame);
 });
+
+function exibirResultPainel(exibir){
+    var display = document.getElementById(exibir).style.display;
+    if (display == 'none'){
+        document.getElementById(exibir).style.display = "flex";
+    }
+    else{
+        document.getElementById(exibir).style.display = "none";
+    }
+}
+
+function esconderBotao(esconder) {
+    var display = document.getElementById(esconder).style.display;
+    if (display == "block") {
+        document.getElementById(esconder).style.display = "none";
+    }
+    else {
+        document.getElementById(esconder).style.display = "block";
+    }
+}

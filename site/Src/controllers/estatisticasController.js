@@ -1,5 +1,19 @@
 var estatisticasModel = require('../models/estatisticasModel');
 
+
+function exibirRanking(req, res) {
+    estatisticasModel.obterEstatisticas()
+        .then(function (estatisticas) {
+            res.json(estatisticas);
+        })
+        .catch(function (erro) {
+            console.log(erro);
+            console.log("\Erro ao recuperar estatísticas! Erro: ", erro.sqlMessage);
+            res.status(500).json({ error: erro.sqlMessage });
+        });
+}
+
+
 function inserirEstatisticas(req, res) {
     var fkUsuario = req.body.fkUsuario;
     var pontuacaoTotal = req.body.pontuacaoTotal;
@@ -22,5 +36,6 @@ function inserirEstatisticas(req, res) {
 }
 
 module.exports = {
-    inserirEstatisticas
+    inserirEstatisticas,
+    exibirRanking
 };
