@@ -98,4 +98,30 @@
     width: 30%;
     height: 400px;
     background-color: #131313;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    text-align: center;
+}
+.result-painel h1{
+    color: #f1f1f1;
+}
+.result-painel p{
+    color: #f1f1f1;
+}
+.btn-information-stats{
+    width: auto;
+    height: 30px;
+    border-radius: 10px;
+    font-size: 12px;
+    border: 1px solid #f1f1f1;
+    background-color: #5252FF;
+    color: #f1f1f1;
+    transition: .4s all;
+}
+.btn-information-stats:hover{
+    color: #131313;
+    border: 2px solid #f1f1f1;
+    cursor: pointer;
 }

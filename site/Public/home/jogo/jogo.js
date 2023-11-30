@@ -70,11 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 exibirResultPainel('result_painel');
 
                 result_painel.innerHTML += `
-                Sua pontuação total: ${state.values.totalScore}
-                Maior pontuação por rodada: ${state.values.maxRoundScore}
-                Menor pontuação por rodada: ${state.values.minRoundScore}
-                Tempo Total Jogado: ${state.values.currentTime = 15} segundos`
-                
+                <h1>Pontuação total: 10</h1>
+                <p>Maior Pontuação por rodada: 6</p>
+                <p>Menor Pontuação por rodada: 1</p>
+                <p>Tempo total jogado: 15</p>
+                `                
                 enviarEstatisticas(state.values.totalScore, state.values.minRoundScore, state.values.maxRoundScore, totalTimePlayed);
                 esconderBotao('start-button');
             }
@@ -172,4 +172,8 @@ function esconderBotao(esconder) {
     else {
         document.getElementById(esconder).style.display = "block";
     }
+}
+
+function verEstatisticas(){
+    window.location.href = "../dashboard/index.html"
 }
