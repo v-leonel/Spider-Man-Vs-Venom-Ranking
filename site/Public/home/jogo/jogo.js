@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 exibirResultPainel('result_painel');
 
                 result_painel.innerHTML += `
-                <h1>Pontuação total: 10</h1>
-                <p>Maior Pontuação por rodada: 6</p>
-                <p>Menor Pontuação por rodada: 1</p>
-                <p>Tempo total jogado: 15</p>
+                <h1>Pontuação total: ${state.values.totalScore}</h1>
+                <p>Maior Pontuação por rodada: ${state.values.maxRoundScore}</p>
+                <p>Menor Pontuação por rodada: ${state.values.minRoundScore}</p>
+                <p>Tempo total jogado: ${totalTimePlayed}</p>
                 `                
                 enviarEstatisticas(state.values.totalScore, state.values.minRoundScore, state.values.maxRoundScore, totalTimePlayed);
                 esconderBotao('start-button');
