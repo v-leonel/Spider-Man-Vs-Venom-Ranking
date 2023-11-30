@@ -1,4 +1,4 @@
-# Projeto Desafio São Paulo Tech School - Jogo Arcade
+# Desafio São Paulo Tech School - Jogo Arcade
 
 ## Descrição do Projeto
 
