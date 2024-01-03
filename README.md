@@ -2,7 +2,7 @@
 
 ## Descrição do Projeto
 
-Este projeto é uma resposta ao desafio individual proposto pela São Paulo Tech School. Consiste no desenvolvimento de uma aplicação web que oferece um jogo no estilo arcade. O objetivo é capturar dados das partidas de cada jogador e exibi-los em um ranking, incluindo a maior pontuação, a menor pontuação, a pontuação total e o tempo total de jogo.
+Este projeto é um desafio individual proposto pela São Paulo Tech School. Consiste no desenvolvimento de uma aplicação web que oferece um jogo no estilo arcade. O objetivo é capturar dados das partidas de cada jogador e exibi-los em um ranking, incluindo a maior pontuação, a menor pontuação, a pontuação total e o tempo total de jogo.
 
 ## Instruções de Uso
 
