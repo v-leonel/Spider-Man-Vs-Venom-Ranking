@@ -30,6 +30,8 @@ Para utilizar este projeto, siga as instruções abaixo:
     ```
 5. Acesse o site, cadastre-se e divirta-se!
 
+## Tela de início
+![Captura de tela 2025-02-11 204217](https://github.com/user-attachments/assets/53a66ac1-3ef4-4260-aca9-4f33cc23d4f1)
 ## Preview do Game Spider VS Venom.
 ![Captura de tela 2023-11-30 013617](https://github.com/v-leonel/Spider-Man-Vs-Venom-Ranking/assets/111584457/c6550920-3dfd-42ab-86ea-34a3313cb9c5)
 ## Ranking de jogadores.
